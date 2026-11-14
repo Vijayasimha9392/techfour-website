@@ -44,8 +44,11 @@ export const contactSchema = z.object({
     .trim()
     .optional()
     .default("")
-    .transform((val) => (val ? val.replace(/\D/g, "") : ""))
-    .refine((val) => val === "" || val.length === 10, {
+    .refine((val) => {
+      if (!val) return true;
+      const digits = val.replace(/\D/g, "");
+      return digits.length === 10;
+    }, {
       message: "Phone number must be exactly 10 digits",
     }),
   company: optionalText(120),

@@ -314,10 +314,17 @@ export function Contact() {
                       id="phone"
                       type="tel"
                       autoComplete="tel"
+                      inputMode="numeric"
+                      placeholder="Enter 10-digit phone number"
                       className={fieldClass}
                       aria-invalid={!!errors.phone}
                       aria-describedby={describedBy("phone")}
-                      {...register("phone")}
+                      {...register("phone", {
+                        onChange: (e) => {
+                          const val = e.target.value.replace(/\D/g, "").slice(0, 10);
+                          e.target.value = val;
+                        },
+                      })}
                     />
                   </Field>
 
