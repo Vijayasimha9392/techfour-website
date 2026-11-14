@@ -4,7 +4,7 @@ import { MIN_FILL_TIME_MS, contactSubmissionSchema } from "./validation";
 import { sendContactEmail } from "./email.server";
 
 export const submitContact = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => contactSubmissionSchema.parse(data))
+  .validator((data: unknown) => contactSubmissionSchema.parse(data))
   .handler(async ({ data }): Promise<ContactResult> => {
     const { website, startedAt, ...fields } = data;
 

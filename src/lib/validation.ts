@@ -42,10 +42,12 @@ export const contactSchema = z.object({
   phone: z
     .string()
     .trim()
-    .max(30, { message: "Phone number must be 30 characters or fewer" })
-    .regex(/^[+()\d\s.-]*$/, { message: "Use digits, spaces and + - ( ) only" })
     .optional()
-    .default(""),
+    .default("")
+    .transform((val) => (val ? val.replace(/\D/g, "") : ""))
+    .refine((val) => val === "" || val.length === 10, {
+      message: "Phone number must be exactly 10 digits",
+    }),
   company: optionalText(120),
   inquiryType: z
     .string()
