@@ -46,6 +46,8 @@ export interface Developer {
   image?: string;
   /** Optional path to resume file, e.g. "/resumes/vijayasimha.pdf" */
   resume?: string;
+  /** Array of projects owned or associated with this developer */
+  projects?: Project[];
 }
 
 export interface Service {
