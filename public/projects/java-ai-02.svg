@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1206"/>
+      <stop offset="50%" stop-color="#120d08"/>
+      <stop offset="100%" stop-color="#0a0804"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg)"/>
+
+  <g opacity="0.1">
+    <rect x="100" y="100" width="600" height="2" fill="#d97706"/>
+    <rect x="100" y="140" width="540" height="2" fill="#b45309"/>
+    <rect x="100" y="180" width="480" height="2" fill="#d97706"/>
+    <rect x="100" y="220" width="420" height="2" fill="#b45309"/>
+    <rect x="100" y="260" width="360" height="2" fill="#d97706"/>
+    <rect x="100" y="300" width="300" height="2" fill="#b45309"/>
+  </g>
+
+  <ellipse cx="400" cy="200" rx="320" ry="110" fill="url(#glow)" filter="url(#blur)"/>
+
+  <g transform="translate(240,90)">
+    <rect x="0" y="0" width="320" height="220" rx="16" fill="none" stroke="url(#accent)" stroke-width="2" opacity="0.8"/>
+    <rect x="12" y="12" width="296" height="196" rx="10" fill="rgba(217,119,6,0.06)"/>
+
+    <g transform="translate(20,30)">
+      <rect x="0" y="0" width="280" height="160" rx="8" fill="none" stroke="url(#accent)" stroke-width="1.5" opacity="0.5"/>
+
+      <g stroke="url(#accent)" stroke-width="2.5" fill="none" stroke-linecap="round">
+        <line x1="20" y1="30" x2="260" y2="30"/>
+        <line x1="20" y1="60" x2="220" y2="60"/>
+        <line x1="20" y1="90" x2="240" y2="90"/>
+        <line x1="20" y1="120" x2="200" y2="120"/>
+      </g>
+
+      <g fill="url(#accent)">
+        <rect x="20" y="30" width="8" height="30" rx="2"/>
+        <rect x="20" y="60" width="8" height="30" rx="2"/>
+        <rect x="20" y="90" width="8" height="30" rx="2"/>
+        <rect x="20" y="120" width="8" height="30" rx="2"/>
+      </g>
+
+      <g fill="#d97706">
+        <circle cx="60" cy="45" r="3"/>
+        <circle cx="100" cy="75" r="3"/>
+        <circle cx="140" cy="105" r="3"/>
+        <circle cx="180" cy="135" r="3"/>
+      </g>
+    </g>
+  </g>
+
+  <g opacity="0.08">
+    <rect x="120" y="340" width="560" height="2" fill="#d97706"/>
+    <rect x="120" y="380" width="480" height="2" fill="#b45309"/>
+    <rect x="120" y="420" width="400" height="2" fill="#92400e"/>
+  </g>
+
+  <text x="60" y="440" fill="#d97706" font-family="monospace" font-size="13" letter-spacing="3">JAVA-AI-02</text>
+  <text x="740" y="440" fill="#64748b" font-family="sans-serif" font-size="12" text-anchor="end">JAVA FULL STACK &amp; AI</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1030"/>
+      <stop offset="50%" stop-color="#141026"/>
+      <stop offset="100%" stop-color="#0a0a18"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <linearGradient id="accent1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg1)"/>
+
+  <g opacity="0.15">
+    <path d="M0 300 Q200 240 400 300 T800 300" stroke="#a78bfa" stroke-width="2" fill="none"/>
+    <path d="M0 360 Q200 300 400 360 T800 360" stroke="#818cf8" stroke-width="2" fill="none"/>
+    <path d="M0 420 Q200 360 400 420 T800 420" stroke="#6366f1" stroke-width="2" fill="none"/>
+  </g>
+
+  <ellipse cx="400" cy="200" rx="280" ry="120" fill="url(#glow1)" filter="url(#blur1)"/>
+
+  <g transform="translate(320,140)">
+    <rect x="0" y="0" width="160" height="160" rx="28" fill="none" stroke="url(#accent1)" stroke-width="2"/>
+    <rect x="12" y="12" width="136" height="136" rx="20" fill="rgba(167,139,250,0.08)"/>
+    <g stroke="url(#accent1)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="48" y="52" width="64" height="64" rx="8"/>
+      <line x1="48" y1="72" x2="112" y2="72"/>
+      <line x1="64" y1="92" x2="96" y2="92"/>
+      <line x1="64" y1="112" x2="96" y2="112"/>
+      <line x1="48" y1="84" x2="48" y2="100"/>
+      <line x1="112" y1="84" x2="112" y2="100"/>
+    </g>
+    <circle cx="72" cy="52" r="4" fill="#a78bfa"/>
+    <circle cx="88" cy="52" r="4" fill="#818cf8"/>
+    <circle cx="104" cy="52" r="4" fill="#6366f1"/>
+  </g>
+
+  <g opacity="0.08">
+    <rect x="120" y="340" width="560" height="2" fill="#a78bfa"/>
+    <rect x="120" y="380" width="480" height="2" fill="#818cf8"/>
+    <rect x="120" y="420" width="400" height="2" fill="#6366f1"/>
+  </g>
+
+  <text x="60" y="440" fill="#a78bfa" font-family="monospace" font-size="13" letter-spacing="3">DOTNET-01</text>
+  <text x="740" y="440" fill="#64748b" font-family="sans-serif" font-size="12" text-anchor="end">.NET DEVELOPMENT</text>
+</svg>

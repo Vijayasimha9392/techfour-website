@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a14"/>
+      <stop offset="50%" stop-color="#081410"/>
+      <stop offset="100%" stop-color="#040a08"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <linearGradient id="accent1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg1)"/>
+
+  <g opacity="0.12">
+    <circle cx="150" cy="120" r="3" fill="#2dd4bf"/>
+    <circle cx="250" cy="160" r="2" fill="#06b6d4"/>
+    <circle cx="350" cy="100" r="3" fill="#2dd4bf"/>
+    <circle cx="450" cy="150" r="2" fill="#06b6d4"/>
+    <circle cx="550" cy="120" r="3" fill="#2dd4bf"/>
+    <circle cx="650" cy="170" r="2" fill="#06b6d4"/>
+    <circle cx="120" cy="240" r="2" fill="#2dd4bf"/>
+    <circle cx="680" cy="220" r="3" fill="#06b6d4"/>
+  </g>
+
+  <ellipse cx="400" cy="200" rx="300" ry="100" fill="url(#glow1)" filter="url(#blur1)"/>
+
+  <g transform="translate(280,110)">
+    <circle cx="120" cy="120" r="90" fill="none" stroke="url(#accent1)" stroke-width="2" opacity="0.6"/>
+    <circle cx="120" cy="120" r="60" fill="none" stroke="url(#accent1)" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="120" cy="120" r="30" fill="none" stroke="url(#accent1)" stroke-width="1.5" opacity="0.3"/>
+
+    <g stroke="url(#accent1)" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M60 120 Q80 90 120 90 T180 120" />
+      <path d="M60 120 Q80 150 120 150 T180 120" />
+      <line x1="120" y1="30" x2="120" y2="60"/>
+      <line x1="120" y1="180" x2="120" y2="210"/>
+      <line x1="30" y1="120" x2="60" y2="120"/>
+      <line x1="180" y1="120" x2="210" y2="120"/>
+    </g>
+
+    <g fill="url(#accent1)">
+      <circle cx="120" cy="30" r="4"/>
+      <circle cx="120" cy="210" r="4"/>
+      <circle cx="30" cy="120" r="4"/>
+      <circle cx="210" cy="120" r="4"/>
+    </g>
+
+    <circle cx="120" cy="120" r="6" fill="#2dd4bf"/>
+  </g>
+
+  <g opacity="0.08">
+    <rect x="120" y="340" width="560" height="2" fill="#2dd4bf"/>
+    <rect x="120" y="380" width="480" height="2" fill="#06b6d4"/>
+    <rect x="120" y="420" width="400" height="2" fill="#0891b2"/>
+  </g>
+
+  <text x="60" y="440" fill="#2dd4bf" font-family="monospace" font-size="13" letter-spacing="3">DATA-01</text>
+  <text x="740" y="440" fill="#64748b" font-family="sans-serif" font-size="12" text-anchor="end">DATA SCIENCE</text>
+</svg>
