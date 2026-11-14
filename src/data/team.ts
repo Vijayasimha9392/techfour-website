@@ -35,11 +35,12 @@ export const team: Developer[] = [
     links: {
       linkedin: "https://www.linkedin.com/in/vijayasimha-tammineni-491a99284",
       github: "https://github.com/Vijayasimha9392",
-      portfolio: "#",
+      portfolio: "https://vijayasimhaportfolio.tech/",
       email: "vijayasimhatammineni@gmail.com",
     },
     availability: { fullTime: true, freelance: true },
     image: "/images/team/vijayasimha.jpeg",
+    resume: "/Vijayasimha_Tammineni_Full_Stack_Resume.pdf",
   },
   {
     id: "shekar",
@@ -62,6 +63,7 @@ export const team: Developer[] = [
     },
     availability: { fullTime: true, freelance: true },
     image: "/images/team/shekar.jpeg",
+    resume: "/Lakshmi_Shekar_.Net_Resume.pdf",
   },
   {
     id: "dinesh",
@@ -97,6 +99,7 @@ export const team: Developer[] = [
     },
     availability: { fullTime: true, freelance: true },
     image: "/images/team/dinesh.jpeg",
+    resume: "/Dinesh_Boini_Resume.pdf",
   },
   {
     id: "manikanta",
@@ -128,6 +131,7 @@ export const team: Developer[] = [
     },
     availability: { fullTime: true, freelance: true },
     image: "/images/team/manikanta.jpeg",
+    resume: "/Manikanta_DevOps_Resume.pdf"
   },
 ];
 

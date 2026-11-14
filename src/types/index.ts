@@ -44,6 +44,8 @@ export interface Developer {
   availability: Availability;
   /** Optional path to a real profile photo, e.g. "/images/team/vijayasimha.jpg" */
   image?: string;
+  /** Optional path to resume file, e.g. "/resumes/vijayasimha.pdf" */
+  resume?: string;
 }
 
 export interface Service {

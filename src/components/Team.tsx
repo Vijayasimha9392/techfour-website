@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { team } from "@/data/team";
 import { getTrack } from "@/data/tracks";
 import { requestContact } from "@/lib/contact-intent";
@@ -82,25 +83,51 @@ function DeveloperCard({ dev }: { dev: Developer }) {
       <div className="flex-1" aria-hidden />
       <div className="relative mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
         <SocialIconLinks links={dev.links} name={dev.name} />
-        <Button
-          asChild
-          variant="outline"
-          size="sm"
-          className="h-9 px-3.5 group-hover:border-track/50"
-        >
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              requestContact({
-                developerPreference: dev.name,
-                inquiryType: "Individual Developer Hiring",
-              });
-            }}
+        <div className="flex gap-2">
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className="h-9 px-3.5 group-hover:border-track/50"
           >
-            Contact {dev.firstName} <ArrowRight />
-          </a>
-        </Button>
+            {/* <a
+              href={`/developers/${dev.id}`}
+            >
+              View Details <ArrowRight />
+            </a> */}
+          </Button>
+          <div className="flex gap-2">
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="h-9 px-3.5 group-hover:border-track/50"
+            >
+              <Link to={`/developers/${dev.id}`}>
+                View Details <ArrowRight />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="h-9 px-3.5 group-hover:border-track/50"
+            >
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  requestContact({
+                    developerPreference: dev.name,
+                    inquiryType: "Individual Developer Hiring",
+                  });
+                }}
+              >
+                Contact {dev.firstName} <ArrowRight />
+              </a>
+            </Button>
+          </div>
+        </div>
       </div>
     </article>
   );
